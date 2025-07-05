@@ -16,8 +16,7 @@ public class User : BaseEntity
 
     public bool IsActive { get; private set; } = true;
 
-
-    // TODO: Implement Navigation property for budget
+    public virtual ICollection<Budget> Budgets { get; private set; } = new List<Budget>();
 
     private User() { } // EF Core
 
